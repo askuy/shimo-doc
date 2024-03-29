@@ -19,7 +19,17 @@ jobs:
             git clone https://${{ secrets.GIT_REPO_TOKEN }}:x-oauth-basic@github.com/shimo-open/gen-doc.git
             find . -mindepth 1 -maxdepth 1 ! -name '.git' ! -name '.gitignore' ! -name '.github' ! -name 'gen-doc' ! -name 'README.md'  -exec cp -rf {} ./gen-doc/ \;
             cd gen-doc
-            git checkout dev
+            
+            export REF=${{ github.event.client_payload.ref }}
+            sh -c '''
+            if [ -z "$REF" ]; 
+            then export BRANCH=dev; 
+            else export BRANCH=${REF#refs/heads/}; 
+            fi
+            '''
+            echo "${BRANCH}"
+            
+            git checkout ${BRANCH}
             yarn
             export PUBLIC_PATH=${{ vars.PUBLISH_PUBLIC_CDN_DEV }} && yarn build
             cd ../
