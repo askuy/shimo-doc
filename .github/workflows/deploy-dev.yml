@@ -21,6 +21,7 @@ jobs:
             cd gen-doc
             
             export REF=${{ github.event.client_payload.ref }}
+            echo "REF: ${REF}"
             sh -c '''
             if [ -z "$REF" ]; 
             then export BRANCH=dev; 
