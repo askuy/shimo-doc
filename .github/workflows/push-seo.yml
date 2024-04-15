@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
       - name: Run push seo
         run: | 
-            export version=0.0.2 && wget https://github.com/shimo-open/push-seo/releases/download/v${version}/push-seo-${version}-linux-amd64.tar.gz && \
+            export version=0.0.3 && wget https://github.com/shimo-open/push-seo/releases/download/v${version}/push-seo-${version}-linux-amd64.tar.gz && \
             tar zxvf push-seo-${version}-linux-amd64.tar.gz && ls -rtlh &&\
             ./push-seo sync -s 'https://open.shimo.im/sitemap.xml' -c ./config/default.toml
         env:
