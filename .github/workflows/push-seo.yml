@@ -1,0 +1,26 @@
+name: push-seo
+
+on:
+  push:
+    tags:
+      - "v**"
+
+jobs:
+  push-seo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Run push seo
+        run: | 
+            export version=0.0.2 && wget https://github.com/shimo-open/push-seo/releases/download/v${version}/push-seo-${version}-linux-amd64.tar.gz && \
+            tar zxvf push-seo-${version}-linux-amd64.tar.gz && ls -rtlh &&\
+            ./push-seo sync -s 'https://open.shimo.im/sitemap.xml' -c ./config/default.toml
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+          AK_ID: ${{ secrets.AK_ID }}
+          AK_SECRET: ${{ secrets.AK_SECRET }}
+          BAIDU_TOKEN: ${{ secrets.BAIDU_TOKEN }}
+          EGO_LOG_WRITER: stderr
