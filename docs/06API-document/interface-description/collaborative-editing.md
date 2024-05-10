@@ -226,9 +226,15 @@ echo $res->getBody();
 
 创建指定协同文档的副本。
 
+:::info 提示
+
+path 中的 shimo-files 改为 collab-files，原 shimo-files 仍可用
+
+:::
+
 **请求地址**
 
-_POST_ https://shimo-domain/sdk/v2/shimo-files/{fileId}/copy
+_POST_ https://shimo-domain/sdk/v2/collab-files/{fileId}/copy
 
 **HTTP Request Body**
 
@@ -552,9 +558,15 @@ echo $res->getBody();
 
 获取文件侧边栏历史列表信息，历史类型分为操作历史和编辑历史。
 
+:::info 提示
+
+path 中的 shimo-files 改为 collab-files，原 shimo-files 仍可用
+
+:::
+
 **请求地址**
 
-_GET_ https://shimo-domain/sdk/v2/shimo-files/{fileId}/doc-sidebar-info
+_GET_ https://shimo-domain/sdk/v2/collab-files/{fileId}/doc-sidebar-info
 
 **HTTP Request Parameters**
 
@@ -579,7 +591,7 @@ values={[
 <TabItem value="curl">
 
 ```bash
-curl "https://shimo-domain/sdk/v2/shimo-files/{fileId}/doc-sidebar-info" \
+curl "https://shimo-domain/sdk/v2/collab-files/{fileId}/doc-sidebar-info" \
 --header 'X-Shimo-Signature: your_signature' \
 --header 'X-Shimo-Token: your_token'
 ```
@@ -591,7 +603,7 @@ curl "https://shimo-domain/sdk/v2/shimo-files/{fileId}/doc-sidebar-info" \
 OkHttpClient client = new OkHttpClient().newBuilder()
   .build();
 Request request = new Request.Builder()
-  .url("https://shimo-domain/sdk/v2/shimo-files/{fileId}/doc-sidebar-info")
+  .url("https://shimo-domain/sdk/v2/collab-files/{fileId}/doc-sidebar-info")
   .method("GET", null)
   .addHeader("X-Shimo-Signature", "your_signature")
   .addHeader("X-Shimo-Token", "your_token")
@@ -612,7 +624,7 @@ import (
 )
 
 func main() {
-  url := "https://shimo-domain/sdk/v2/shimo-files/%3CfileId%3E/doc-sidebar-info"
+  url := "https://shimo-domain/sdk/v2/collab-files/%3CfileId%3E/doc-sidebar-info"
   method := "GET"
 
   client := &http.Client {
@@ -651,7 +663,7 @@ var axios = require("axios");
 
 var config = {
   method: "GET",
-  url: "https://shimo-domain/sdk/v2/shimo-files/{fileId}/doc-sidebar-info",
+  url: "https://shimo-domain/sdk/v2/collab-files/{fileId}/doc-sidebar-info",
   headers: {
     "X-Shimo-Signature": "your_signature",
     "X-Shimo-Token": "your_token",
@@ -680,7 +692,7 @@ $headers = [
   'X-Shimo-Signature' => 'your_signature',
   'X-Shimo-Token' => 'your_token'
 ];
-$request = new Request('GET', 'https://shimo-domain/sdk/v2/shimo-files/{fileId}/doc-sidebar-info', $headers);
+$request = new Request('GET', 'https://shimo-domain/sdk/v2/collab-files/{fileId}/doc-sidebar-info', $headers);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();
 
@@ -851,9 +863,15 @@ JSON 数据为 `histories[i].content` 字段，经过 JSON.parse()解析后的�
 
 获取文件版本列表信息。
 
+:::info 提示
+
+path 中的 shimo-files 改为 collab-files，原 shimo-files 仍可用
+
+:::
+
 **请求地址**
 
-_GET_ https://shimo-domain/sdk/v2/shimo-files/{fileId}/revisions
+_GET_ https://shimo-domain/sdk/v2/collab-files/{fileId}/revisions
 
 **HTTP Request Parameters**
 
@@ -875,7 +893,7 @@ values={[
 <TabItem value="curl">
 
 ```bash
-curl --request GET 'https://shimo-domain/sdk/v2/shimo-files/{fileId}/revisions' \
+curl --request GET 'https://shimo-domain/sdk/v2/collab-files/{fileId}/revisions' \
 --header 'X-Shimo-Signature: your_signature' \
 --header 'X-Shimo-Token: your_token'
 ```
@@ -887,7 +905,7 @@ curl --request GET 'https://shimo-domain/sdk/v2/shimo-files/{fileId}/revisions' 
 OkHttpClient client = new OkHttpClient().newBuilder()
   .build();
 Request request = new Request.Builder()
-  .url("https://shimo-domain/sdk/v2/shimo-files/{fileId}/revisions")
+  .url("https://shimo-domain/sdk/v2/collab-files/{fileId}/revisions")
   .method("GET", null)
   .addHeader("X-Shimo-Signature", "your_signature")
   .addHeader("X-Shimo-Token", "your_token")
@@ -908,7 +926,7 @@ import (
 )
 
 func main() {
-  url := "https://shimo-domain/sdk/v2/shimo-files/%3CfileId%3E/revisions"
+  url := "https://shimo-domain/sdk/v2/collab-files/%3CfileId%3E/revisions"
   method := "GET"
 
   client := &http.Client {
@@ -946,7 +964,7 @@ var axios = require("axios");
 
 var config = {
   method: "GET",
-  url: "https://shimo-domain/sdk/v2/shimo-files/{fileId}/revisions",
+  url: "https://shimo-domain/sdk/v2/collab-files/{fileId}/revisions",
   headers: {
     "X-Shimo-Signature": "your_signature",
     "X-Shimo-Token": "your_token",
@@ -975,7 +993,7 @@ $headers = [
   'X-Shimo-Signature' => 'your_signature',
   'X-Shimo-Token' => 'your_token'
 ];
-$request = new Request('GET', 'https://shimo-domain/sdk/v2/shimo-files/{fileId}/revisions', $headers);
+$request = new Request('GET', 'https://shimo-domain/sdk/v2/collab-files/{fileId}/revisions', $headers);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();
 
@@ -1039,9 +1057,15 @@ Example
 
 获取指定文件的纯文本形式内容。
 
+:::info 提示
+
+path 中的 shimo-files 改为 collab-files，原 shimo-files 仍可用
+
+:::
+
 **请求地址**
 
-_GET_ https://shimo-domain/sdk/v2/shimo-files/{fileId}/plain-text
+_GET_ https://shimo-domain/sdk/v2/collab-files/{fileId}/plain-text
 
 **HTTP Request Parameters**
 
@@ -1063,7 +1087,7 @@ values={[
 <TabItem value="curl">
 
 ```bash
-curl --request GET 'https://shimo-domain/sdk/v2/shimo-files/{fileId}/plain-text' \
+curl --request GET 'https://shimo-domain/sdk/v2/collab-files/{fileId}/plain-text' \
 --header 'X-Shimo-Signature: your_signature' \
 --header 'X-Shimo-Token: your_token'
 ```
@@ -1075,7 +1099,7 @@ curl --request GET 'https://shimo-domain/sdk/v2/shimo-files/{fileId}/plain-text'
 OkHttpClient client = new OkHttpClient().newBuilder()
   .build();
 Request request = new Request.Builder()
-  .url("https://shimo-domain/sdk/v2/shimo-files/{fileId}/plain-text?signature=your_signature&token=your_token")
+  .url("https://shimo-domain/sdk/v2/collab-files/{fileId}/plain-text?signature=your_signature&token=your_token")
   .method("GET", null)
   .addHeader("X-Shimo-Signature", "your_signature")
   .addHeader("X-Shimo-Token", "your_token")
@@ -1096,7 +1120,7 @@ import (
 )
 
 func main() {
-  url := "https://shimo-domain/sdk/v2/shimo-files/%3CfileId%3E/plain-text"
+  url := "https://shimo-domain/sdk/v2/collab-files/%3CfileId%3E/plain-text"
   method := "GET"
 
   client := &http.Client {
@@ -1134,7 +1158,7 @@ var axios = require("axios");
 
 var config = {
   method: "GET",
-  url: "https://shimo-domain/sdk/v2/shimo-files/{fileId}/plain-text",
+  url: "https://shimo-domain/sdk/v2/collab-files/{fileId}/plain-text",
   headers: {
     "X-Shimo-Signature": "your_signature",
     "X-Shimo-Token": "your_token",
@@ -1163,7 +1187,7 @@ $headers = [
   'X-Shimo-Signature' => 'your_signature',
   'X-Shimo-Token' => 'your_token'
 ];
-$request = new Request('GET', 'https://shimo-domain/sdk/v2/shimo-files/{fileId}/plain-text', $headers);
+$request = new Request('GET', 'https://shimo-domain/sdk/v2/collab-files/{fileId}/plain-text', $headers);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();
 
@@ -1199,9 +1223,15 @@ Example
 中日韩文字，每个字符都当做一个独立的单词来计数，比如对于“你好”，是两个单词：”你“ 和 ”好“
 英文和其它符号，只会由空格来区分，比如对于“Hello world”，也只有两个单词：“Hello” 和 “world”。
 
+:::info 提示
+
+path 中的 shimo-files 改为 collab-files，原 shimo-files 仍可用
+
+:::
+
 **请求地址**
 
-_POST_ https://shimo-domain/sdk/v2/shimo-files/{fileId}/plain-text/wc
+_POST_ https://shimo-domain/sdk/v2/collab-files/{fileId}/plain-text/wc
 
 **HTTP Request Parameters**
 
@@ -1229,7 +1259,7 @@ values={[
 <TabItem value="curl">
 
 ```bash
-curl --request POST 'https://shimo-domain/sdk/v2/shimo-files/{fileId}/plain-text/wc' \
+curl --request POST 'https://shimo-domain/sdk/v2/collab-files/{fileId}/plain-text/wc' \
 --header 'X-Shimo-Signature: your_signature' \
 --header 'X-Shimo-Token: your_token' \
 --data-raw '{
@@ -1246,7 +1276,7 @@ OkHttpClient client = new OkHttpClient().newBuilder()
 MediaType mediaType = MediaType.parse("application/json");
 RequestBody body = RequestBody.create(mediaType, "{\"keywords\":[\"foo\",\"bar\"]}");
 Request request = new Request.Builder()
-  .url("https://shimo-domain/sdk/v2/shimo-files/{fileId}/plain-text/wc")
+  .url("https://shimo-domain/sdk/v2/collab-files/{fileId}/plain-text/wc")
   .method("POST", body)
   .addHeader("X-Shimo-Signature", "your_signature")
   .addHeader("X-Shimo-Token", "your_token")
@@ -1267,7 +1297,7 @@ import (
 )
 
 func main() {
-  url := "https://shimo-domain/sdk/v2/shimo-files/%3CfileId%3E/plain-text/wc"
+  url := "https://shimo-domain/sdk/v2/collab-files/%3CfileId%3E/plain-text/wc"
   method := "POST"
 
     payload := strings.NewReader(`{
@@ -1312,7 +1342,7 @@ var data = JSON.stringify({
 
 var config = {
   method: "POST",
-  url: "https://shimo-domain/sdk/v2/shimo-files/{fileId}/plain-text/wc",
+  url: "https://shimo-domain/sdk/v2/collab-files/{fileId}/plain-text/wc",
   headers: {
     "X-Shimo-Signature": "your_signature",
     "X-Shimo-Token": "your_token",
@@ -1348,7 +1378,7 @@ $options = [
     "keywords": ["foo", "bar"]
 }' => ''
 ]];
-$request = new Request('POST', 'https://shimo-domain/sdk/v2/shimo-files/{fileId}/plain-text/wc', $headers);
+$request = new Request('POST', 'https://shimo-domain/sdk/v2/collab-files/{fileId}/plain-text/wc', $headers);
 $res = $client->sendAsync($request, $options)->wait();
 echo $res->getBody();
 
@@ -1393,9 +1423,15 @@ echo $res->getBody();
 - `documentPro` 传统文档
 - `spreadsheet` 表格
 
+:::info 提示
+
+path 中的 shimo-files 改为 collab-files，原 shimo-files 仍可用
+
+:::
+
 **请求地址**
 
-_GET_ https://shimo-domain/sdk/v2/shimo-files/{fileId}/mention-at-list
+_GET_ https://shimo-domain/sdk/v2/collab-files/{fileId}/mention-at-list
 
 **HTTP Request Parameters**
 
@@ -1417,7 +1453,7 @@ values={[
 <TabItem value="curl">
 
 ```bash
-curl "https://shimo-domain/sdk/v2/shimo-files/ad8ed1afa8172d91/mention-at-list" \
+curl "https://shimo-domain/sdk/v2/collab-files/ad8ed1afa8172d91/mention-at-list" \
 --header 'X-Shimo-Signature: your_signature' \
 --header 'X-Shimo-Token: your_token'
 ```
@@ -1429,7 +1465,7 @@ curl "https://shimo-domain/sdk/v2/shimo-files/ad8ed1afa8172d91/mention-at-list" 
 OkHttpClient client = new OkHttpClient().newBuilder()
   .build();
 Request request = new Request.Builder()
-  .url("https://shimo-domain/sdk/v2/shimo-files/ad8ed1afa8172d91/mention-at-list")
+  .url("https://shimo-domain/sdk/v2/collab-files/ad8ed1afa8172d91/mention-at-list")
   .addHeader("X-Shimo-Signature", "your_signature")
   .addHeader("X-Shimo-Token", "your_token")
   .build();
@@ -1450,7 +1486,7 @@ import (
 )
 
 func main() {
-  url := "https://shimo-domain/sdk/v2/shimo-files/ad8ed1afa8172d91/mention-at-list"
+  url := "https://shimo-domain/sdk/v2/collab-files/ad8ed1afa8172d91/mention-at-list"
   method := "GET"
 
   client := &http.Client {
@@ -1488,7 +1524,7 @@ var axios = require("axios");
 
 axios({
   method: "GET",
-  url: "https://shimo-domain/sdk/v2/shimo-files/ad8ed1afa8172d91/mention-at-list",
+  url: "https://shimo-domain/sdk/v2/collab-files/ad8ed1afa8172d91/mention-at-list",
   header: {
     "X-Shimo-Signature": "your_signature",
     "X-Shimo-Token": "your_token",
@@ -1515,7 +1551,7 @@ $headers = [
   'X-Shimo-Signature' => 'your_signature',
   'X-Shimo-Token' => 'your_token'
 ];
-$request = new Request('GET', 'https://shimo-domain/sdk/v2/shimo-files/ad8ed1afa8172d91/mention-at-list', $headers);
+$request = new Request('GET', 'https://shimo-domain/sdk/v2/collab-files/ad8ed1afa8172d91/mention-at-list', $headers);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();
 
@@ -1572,9 +1608,15 @@ Example
 
 - `spreadsheet` 表格
 
+:::info 提示
+
+path 中的 shimo-files 改为 collab-files，原 shimo-files 仍可用
+
+:::
+
 **请求地址**
 
-_GET_ https://shimo-domain/sdk/v2/shimo-files/{fileId}/comment-count
+_GET_ https://shimo-domain/sdk/v2/collab-files/{fileId}/comment-count
 
 **HTTP Request Parameters**
 
@@ -1596,7 +1638,7 @@ values={[
 <TabItem value="curl">
 
 ```bash
-curl "https://shimo-domain/sdk/v2/shimo-files/fe143ca1a08e9976/comment-count" \
+curl "https://shimo-domain/sdk/v2/collab-files/fe143ca1a08e9976/comment-count" \
 --header 'X-Shimo-Signature: your_signature' \
 --header 'X-Shimo-Token: your_token'
 ```
@@ -1608,7 +1650,7 @@ curl "https://shimo-domain/sdk/v2/shimo-files/fe143ca1a08e9976/comment-count" \
 OkHttpClient client = new OkHttpClient().newBuilder()
   .build();
 Request request = new Request.Builder()
-  .url("https://shimo-domain/sdk/v2/shimo-files/fe143ca1a08e9976/comment-count")
+  .url("https://shimo-domain/sdk/v2/collab-files/fe143ca1a08e9976/comment-count")
   .addHeader("X-Shimo-Signature", "your_signature")
   .addHeader("X-Shimo-Token", "your_token")
   .build();
@@ -1629,7 +1671,7 @@ import (
 )
 
 func main() {
-  url := "https://shimo-domain/sdk/v2/shimo-files/fe143ca1a08e9976/comment-count"
+  url := "https://shimo-domain/sdk/v2/collab-files/fe143ca1a08e9976/comment-count"
   method := "GET"
 
   client := &http.Client {
@@ -1667,7 +1709,7 @@ func main() {
 var axios = require("axios");
 var config = {
   method: "GET",
-  url: "https://shimo-domain/sdk/v2/shimo-files/fe143ca1a08e9976/comment-count",
+  url: "https://shimo-domain/sdk/v2/collab-files/fe143ca1a08e9976/comment-count",
   headers: {
     "X-Shimo-Signature": "your_signature",
     "X-Shimo-Token": "your_token",
@@ -1697,7 +1739,7 @@ $headers = [
   'X-Shimo-Signature' => 'your_signature',
   'X-Shimo-Token' => 'your_token'
 ];
-$request = new Request('GET', 'https://shimo-domain/sdk/v2/shimo-files/fe143ca1a08e9976/comment-count', $headers);
+$request = new Request('GET', 'https://shimo-domain/sdk/v2/collab-files/fe143ca1a08e9976/comment-count', $headers);
 $res = $client->sendAsync($request)->wait();
 echo $res->getBody();
 
