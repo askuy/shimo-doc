@@ -1063,6 +1063,13 @@ path 中的 shimo-files 改为 collab-files，原 shimo-files 仍可用
 
 :::
 
+支持文件类型：
+
+- `document` 轻文档
+- `documentPro` 传统文档
+- `spreadsheet` 表格
+- `presentation` 幻灯片
+
 **请求地址**
 
 _GET_ https://shimo-domain/sdk/v2/collab-files/{fileId}/plain-text
@@ -1228,6 +1235,13 @@ Example
 path 中的 shimo-files 改为 collab-files，原 shimo-files 仍可用
 
 :::
+
+支持文件类型：
+
+- `document` 轻文档
+- `documentPro` 传统文档
+- `spreadsheet` 表格
+- `presentation` 幻灯片
 
 **请求地址**
 
