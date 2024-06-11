@@ -65,6 +65,6 @@ meta:
 * 故障恢复
 
 ### 引用
-* [1] [什么是系统稳定性](https://www.amazonaws.cn/knowledge/what-is-system-stability/)
-* [2] [稳定性系列文章1-如何评价系统稳定性？](https://segmentfault.com/a/1190000040994489)
+- [1] [什么是系统稳定性](https://www.amazonaws.cn/knowledge/what-is-system-stability/)
+- [2] [稳定性系列文章1-如何评价系统稳定性？](https://segmentfault.com/a/1190000040994489)
 
