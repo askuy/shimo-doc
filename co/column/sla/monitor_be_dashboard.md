@@ -8,7 +8,7 @@ meta:
 ---
 
 ### 总览图
-[dashborad_overview.json](https://github.com/shimo-open/shimo-doc/blob/main/co/column/sla/monitor_be_dashboard_overview.json)
+[dashborad_overview.json](https://github.com/shimo-open/shimo-doc/blob/master/co/column/sla/monitor_be_dashboard_overview.json)
 ![img.png](../../image/sla/monitor_be_dashboard1.png)
 ![img.png](../../image/sla/monitor_be_dashboard2.png)
 
