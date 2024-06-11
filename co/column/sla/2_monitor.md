@@ -4,7 +4,7 @@ description: 稳定性-运行观测
 meta:
   - name: 系统稳定性, 可靠服务, 可用性 
     content: 系统稳定性指系统在面对业务数据量增长或者各种意外事件时，仍能持续提供可靠服务的能力
-sidebar_position: 2
+sidebar_position: 3
 ---
 服务运行还好好的，为什么突然出问题了？这种服务突然崩掉，大家都会比较懵逼，因为会发现系统到处都是问题，很难找到根因。
 
@@ -53,16 +53,13 @@ sidebar_position: 2
 * 核心服务Request Limit设置为1:1，避免被驱逐
 
 ## 中间件出问题 todo
-
 * 观测 MySQL客户端Slow，Redis客户端Slow
 * 服务端的一些排查方式
-  // todo
-
 * Prometheus监控图
 * 日志如何分析
 
-
-
+## 相关文档
+* [MySQL的MaxIdleConns不合理，会变成短连接](https://mp.weixin.qq.com/s/zxlgnFkcEwaSDx5uJZO8Ig)
 * [docker资源限制和lxcfs实现对容器资源视图隔离](https://cloud.tencent.com/developer/article/2368982?areaId=106001)
 * [简单介绍cgroups以及在K8s中的应用 - CPU](https://cloud.tencent.com/developer/article/2314652)
 

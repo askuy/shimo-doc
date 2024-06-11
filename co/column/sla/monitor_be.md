@@ -4,7 +4,7 @@ description: 稳定性-后端监控指标
 meta:
   - name: 系统稳定性, 可靠服务, 可用性 
     content: 系统稳定性指系统在面对业务数据量增长或者各种意外事件时，仍能持续提供可靠服务的能力
-sidebar_position: 3
+sidebar_position: 4
 ---
 石墨2024私有化版本，大部分后端应用统一了日志，监控指标。
 
