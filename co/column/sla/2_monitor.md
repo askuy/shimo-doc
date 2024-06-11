@@ -1,5 +1,5 @@
 ---
-title: 稳定性-运行观测
+title: 运行观测
 description: 稳定性-运行观测
 meta:
   - name: 系统稳定性, 可靠服务, 可用性 

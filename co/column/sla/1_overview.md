@@ -1,5 +1,5 @@
 ---
-title: 稳定性-介绍
+title: 介绍
 description: 稳定性的重要性
 meta:
   - name: 系统稳定性, 可靠服务, 可用性 
@@ -53,7 +53,7 @@ sidebar_position: 1
     * 优雅关闭
     * 动态扩容
     * 中间件
-* 运行观测
+* [运行观测](./2_monitor.md)
     * 隔离
     * 连接池
     * Time Wait
@@ -63,8 +63,14 @@ sidebar_position: 1
 * 巡查系统
     * 5xx
 * 故障恢复
+* [必要条件](./necessary_condition.md)
+  * 需要建设或接入客户的服务观测平台
+  * 需要更多系统及平台的权限
+  * 需要石墨侧提供专职 SRE，时刻应对生产环境各类潜在风险
+  * 需要 SRE 每周固定巡检
+  * 需要有更充足的资源余量
 
 ### 引用
-- [1] [什么是系统稳定性](https://www.amazonaws.cn/knowledge/what-is-system-stability/)
-- [2] [稳定性系列文章1-如何评价系统稳定性？](https://segmentfault.com/a/1190000040994489)
+- 1 [什么是系统稳定性](https://www.amazonaws.cn/knowledge/what-is-system-stability/)
+- 2 [稳定性系列文章1-如何评价系统稳定性？](https://segmentfault.com/a/1190000040994489)
 
