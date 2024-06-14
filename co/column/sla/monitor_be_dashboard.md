@@ -8,7 +8,10 @@ meta:
 ---
 
 ### 总览图
+使用以下配置，就可以看到对应监控
 [dashborad_overview.json](https://github.com/shimo-open/shimo-doc/blob/master/co/column/sla/monitor_be_dashboard_overview.json)
 ![img.png](../../image/sla/monitor_be_dashboard1.png)
 ![img.png](../../image/sla/monitor_be_dashboard2.png)
 
+[client_overview.json](https://github.com/shimo-open/shimo-doc/blob/master/co/column/sla/monitor_be_dashboard_overview.json)
+![monitor3.png](../../image/sla/monitor_be_dashboard3.png)
